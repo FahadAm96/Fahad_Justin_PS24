@@ -39,21 +39,32 @@
                 padding: 10px; /* Add padding for mobile */
             }
 
-            .d-flex {
+            .header-content {
+                display: flex;
                 flex-direction: column; /* Stack items vertically on small screens */
                 align-items: center; /* Center-align items horizontally */
+                text-align: center; /* Center text */
             }
 
-            .d-flex.align-items-center {
+            .logo {
                 margin-bottom: 10px; /* Space between logo and buttons */
             }
 
-            .d-flex.gap-3 {
-                gap: 10px; /* Reduce gap between elements for mobile */
+            .d-flex {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .d-flex.align-items-center {
+                margin-bottom: 10px;
             }
 
             .elementor-button-content-wrapper {
                 font-size: 14px; /* Adjust font size for mobile devices */
+            }
+
+            .d-flex.gap-3 {
+                gap: 10px; /* Reduce gap between elements for mobile */
             }
         }
     </style>
@@ -68,18 +79,23 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
     <script>
         // Ensure the page is scrolled to the top when refreshed
-        window.onbeforeunload = function() {
+        window.onload = function() {
             window.scrollTo(0, 0);
+        }
+
+        function refreshPage() {
+            window.location.reload();
+            window.scrollTo(0, 0); // Scroll to top after refresh
         }
     </script>
 </head>
 
 <body>
     <section class="header-section">
-        <div class="d-flex justify-content-between align-items-center">
+        <div class="header-content d-flex justify-content-between align-items-center">
             <div class="d-flex align-items-center">
                 <!-- Logo clickable with JavaScript to reload page -->
-                <a href="javascript:void(0);" onclick="window.location.reload();">
+                <a href="javascript:void(0);" onclick="refreshPage();">
                     <img class="logo" src="./assets/images/ps24 logo.png" alt="PfotenSchutz24 Logo">
                 </a>
             </div>
@@ -105,7 +121,7 @@
             <div class="row m-0 align-items-center reverse">
                 <div class="col-md-12 col-12">
                     <div class="text-lefts text-center">
-
+                        
 
                         <h1>
 
