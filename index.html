@@ -41,30 +41,25 @@
 
             .header-content {
                 display: flex;
-                flex-direction: column; /* Stack items vertically on small screens */
-                align-items: center; /* Center-align items horizontally */
+                justify-content: space-between; /* Keep elements in a row */
+                align-items: center; /* Align items vertically center */
                 text-align: center; /* Center text */
+                flex-wrap: wrap; /* Allow wrapping on smaller screens */
             }
 
             .logo {
-                margin-bottom: 10px; /* Space between logo and buttons */
+                margin: 0 auto; /* Center the logo horizontally */
             }
 
             .d-flex {
-                flex-direction: column;
+                flex-direction: row;
+                justify-content: space-between; /* Distribute space between items */
                 align-items: center;
-            }
-
-            .d-flex.align-items-center {
-                margin-bottom: 10px;
+                gap: 15px; /* Adjust gap between items */
             }
 
             .elementor-button-content-wrapper {
                 font-size: 14px; /* Adjust font size for mobile devices */
-            }
-
-            .d-flex.gap-3 {
-                gap: 10px; /* Reduce gap between elements for mobile */
             }
         }
     </style>
@@ -121,8 +116,8 @@
             <div class="row m-0 align-items-center reverse">
                 <div class="col-md-12 col-12">
                     <div class="text-lefts text-center">
-                        
 
+                      
                         <h1>
 
                             Die Tierversicherung
