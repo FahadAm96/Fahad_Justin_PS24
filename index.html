@@ -19,6 +19,38 @@
         .accordion-button:not(.collapsed)::after {
             background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='%23333' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' d='M0 8a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H1a1 1 0 0 1-1-1z' clip-rule='evenodd'/%3e%3c/svg%3e");
         }
+
+        /* Sticky Header Styles */
+        .header-section {
+            position: sticky;
+            top: 0;
+            z-index: 1000; /* Ensures the header stays on top of other content */
+            background-color: #fff; /* Add background to prevent content from showing through */
+            border-bottom: 1px solid #ddd; /* Optional: Add a border for separation */
+            padding: 10px 0; /* Add padding for spacing */
+        }
+
+        .logo {
+            max-height: 50px; /* Adjust based on your design */
+        }
+
+        @media (max-width: 768px) {
+            .header-section {
+                text-align: center; /* Center the header content on mobile devices */
+            }
+
+            .d-flex {
+                flex-direction: column; /* Stack the items vertically on smaller screens */
+            }
+
+            .d-flex.align-items-center {
+                margin-bottom: 10px; /* Space between logo and buttons */
+            }
+
+            .elementor-button-content-wrapper {
+                font-size: 14px; /* Adjust font size for mobile devices */
+            }
+        }
     </style>
     <!-- Montserrat Font -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
@@ -29,7 +61,6 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
-
 </head>
 
 <body>
@@ -40,9 +71,6 @@
                 <a href="javascript:void(0);" onclick="window.location.reload();">
                     <img class="logo" src="./assets/images/ps24 logo.png" alt="PfotenSchutz24 Logo">
                 </a>
-                <!-- <img class="logo-2"
-                    src="./assets/images/c2VydmljZT1pbWFnZXMmc3JjPWh0dHBzJTNBJTJGJTJGZG9nY2FyZTI0LmRlJTJGd3AtY29udGVudCUyRnVwbG9hZHMlMkYyMDIzJTJGMDIlMkZiYXJtZW5pYS1sb2dvLnBuZyZjYWNoZU1hcmtlcj0xNzA2ODc3NDA5LTE0NDIxJnRva2VuPTJhMmM0.png"
-                    alt=""> -->
             </div>
             <div class="d-flex gap-3 align-items-center">
                 <a class="elementor-button elementor-button-link elementor-size-sm" href="tel:49 157764641999">
