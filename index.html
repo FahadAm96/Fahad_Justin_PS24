@@ -36,15 +36,20 @@
 
         @media (max-width: 768px) {
             .header-section {
-                text-align: center; /* Center the header content on mobile devices */
+                padding: 10px; /* Add padding for mobile */
             }
 
             .d-flex {
-                flex-direction: column; /* Stack the items vertically on smaller screens */
+                flex-direction: column; /* Stack items vertically on small screens */
+                align-items: center; /* Center-align items horizontally */
             }
 
             .d-flex.align-items-center {
                 margin-bottom: 10px; /* Space between logo and buttons */
+            }
+
+            .d-flex.gap-3 {
+                gap: 10px; /* Reduce gap between elements for mobile */
             }
 
             .elementor-button-content-wrapper {
@@ -61,6 +66,12 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <script>
+        // Ensure the page is scrolled to the top when refreshed
+        window.onbeforeunload = function() {
+            window.scrollTo(0, 0);
+        }
+    </script>
 </head>
 
 <body>
@@ -94,6 +105,7 @@
             <div class="row m-0 align-items-center reverse">
                 <div class="col-md-12 col-12">
                     <div class="text-lefts text-center">
+
 
                         <h1>
 
