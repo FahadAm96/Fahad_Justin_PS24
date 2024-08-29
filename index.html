@@ -942,61 +942,226 @@
                             </a>
                         </div>
                     </div>
-                    <div class="footer-nav d-flex flex-wrap">
-                        <a href="#" target="_blank" class="footer-link">Gesetzl. Erstinformation</a>
-                        <div class="footer-divider">|</div>
-                        <a href="https://home-5016262265.app-ionos.space/" target="_blank" class="footer-link">Impressum</a>
-                        <div class="footer-divider hide--mobile">|</div>
-                        <a href="#" target="_blank" class="footer-link">Datenschutz</a>
-                        <div class="footer-divider">|</div>
-                        <a whenclicked="UC_UI.showSecondLayer();" href="javascript:void(0);" class="footer-link">Cookie Einstellungen</a>
+                    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>PfotenSchutz24</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Custom style */
+        .accordion-button::after {
+            background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='%23333' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' d='M8 0a1 1 0 0 1 1 1v6h6a1 1 0 1 1 0 2H9v6a1 1 0 1 1-2 0V9H1a1 1 0 0 1 0-2h6V1a1 1 0 0 1 1-1z' clip-rule='evenodd'/%3e%3c/svg%3e");
+            transform: scale(.7) !important;
+        }
+
+        .accordion-button:not(.collapsed)::after {
+            background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='%23333' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' d='M0 8a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H1a1 1 0 0 1-1-1z' clip-rule='evenodd'/%3e%3c/svg%3e");
+        }
+
+        /* Sticky Header Styles */
+        .header-section {
+            position: sticky;
+            top: 0;
+            z-index: 1000; /* Ensures the header stays on top of other content */
+            background-color: #fff; /* Add background to prevent content from showing through */
+            border-bottom: 1px solid #ddd; /* Optional: Add a border for separation */
+            padding: 10px 0; /* Add padding for spacing */
+        }
+
+        .logo {
+            max-height: 50px; /* Adjust based on your design */
+        }
+
+        @media (max-width: 768px) {
+            .header-section {
+                padding: 10px; /* Add padding for mobile */
+            }
+
+            .header-content {
+                display: flex;
+                justify-content: space-between; /* Ensure items are spaced out */
+                align-items: center; /* Align items vertically center */
+                text-align: center; /* Center text */
+                flex-wrap: nowrap; /* Prevent wrapping */
+            }
+
+            .logo {
+                margin: 0; /* Remove margin to fit in the row */
+            }
+
+            .header-buttons {
+                display: flex;
+                align-items: center;
+                gap: 10px; /* Space between items */
+            }
+
+            .elementor-button-content-wrapper {
+                font-size: 14px; /* Adjust font size for mobile devices */
+            }
+        }
+
+        /* Footer styles */
+        .footer-nav {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .footer-link {
+            margin-right: 10px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .footer-divider {
+            margin-right: 10px;
+        }
+
+        .hide--mobile {
+            display: none;
+        }
+
+        @media (min-width: 768px) {
+            .hide--mobile {
+                display: block;
+            }
+        }
+    </style>
+    <!-- Montserrat Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/styles/style.css">
+
+    <!-- Slick CSS -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <script>
+        // Ensure the page is scrolled to the top when refreshed
+        window.onload = function() {
+            window.scrollTo(0, 0);
+        }
+
+        function refreshPage() {
+            window.location.reload();
+            window.scrollTo(0, 0); // Scroll to top after refresh
+        }
+    </script>
+</head>
+
+<body>
+    <section class="header-section">
+        <div class="header-content d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+                <!-- Logo clickable with JavaScript to reload page -->
+                <a href="javascript:void(0);" onclick="refreshPage();">
+                    <img class="logo" src="./assets/images/ps24 logo.png" alt="PfotenSchutz24 Logo">
+                </a>
+            </div>
+            <div class="header-buttons d-flex gap-3 align-items-center">
+                <a class="elementor-button elementor-button-link elementor-size-sm" href="tel:49 157764641999">
+                    <span class="elementor-button-content-wrapper phonee">
+                        <span class="elementor-button-text">📞 +49 157764641999</span>
+                    </span>
+                </a>
+                <a class="bttn" href="info.html">
+                    <span class="elementor-button-content-wrapper">
+                        <span class="elementor-button-text">Jetzt online berechnen!</span>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- main-section  -->
+
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row m-0 align-items-center">
+                <div class="col-md-8 col-12">
+                    <div class="">
+                        <div class="logggo pb-3">
+                            <img src="./assets/images/ps24 logo.png" style="width: 200px; height: auto;" alt="">
+                        </div>
+                        <div class="margin-bottom-1">
+                            <div class="footer-h6">Besuchen Sie uns: </div>
+                        </div>
+                        <div class="margin-bottom-2 py-3">
+                            <div class="socials-nav">
+                                <a id="social-link" href="#" class="social-link home w-inline-block">
+                                    <img src="./assets/images/629a1f9f0aa3298842f1e164_social-home-blue.svg" style="width: 1.5rem;" alt="">
+                                </a>
+                                <a href="#" target="_blank" class="social-link facebook w-inline-block">
+                                    <img src="./assets/images/629a1f9f0aa3294fe1f1e16f_social-fb-blue.svg" style="width: 1.5rem;" alt="">
+                                </a>
+                                <a href="#" target="_blank" class="social-link insta w-inline-block">
+                                    <img src="./assets/images/629a1f9f0aa32934a9f1e167_social-insta-blue.svg" style="width: 1.5rem;" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="footer-nav d-flex flex-wrap">
+                            <a href="#" target="_blank" class="footer-link">Gesetzl. Erstinformation</a>
+                            <div class="footer-divider">|</div>
+                            <a href="https://home-5016262265.app-ionos.space/" target="_blank" class="footer-link">Impressum</a>
+                            <div class="footer-divider hide--mobile">|</div>
+                            <a href="file:///C:/Users/daniv/Downloads/datenschutzerklaerung_pfotenschutz24_barmenia_de_de.pdf" target="_blank" class="footer-link">Datenschutz</a>
+                            <div class="footer-divider">|</div>
+                            <a whenclicked="UC_UI.showSecondLayer();" href="javascript:void(0);" class="footer-link">Cookie Einstellungen</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12">
+                    <div class="position-relative">
+                        <img src="./assets/images/image00001.png" style="width: 100%; height: auto; margin-bottom: -6px;" alt="">
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 col-12">
-                <div class="position-relative">
-                    <img src="./assets/images/image00001.png" style="width: 100%; height: auto; margin-bottom: -6px;" alt="">
-                </div>
-            </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
-<!-- Bootstrap JS (optional) -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-<!-- Slick JavaScript -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <!-- Bootstrap JS (optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <!-- Slick JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 
-<script>
-    $(document).ready(function () {
-        $('.slider').slick({
-            slidesToShow: 3, // Display three slides at a time
-            slidesToScroll: 1,
-            autoplay: false,
-            autoplaySpeed: 2000, // Adjust autoplay speed as needed
-            arrows: true, // Show arrows
-            dots: true, // Show indicators
+    <script>
+        $(document).ready(function () {
+            $('.slider').slick({
+                slidesToShow: 3, // Display three slides at a time
+                slidesToScroll: 1,
+                autoplay: false,
+                autoplaySpeed: 2000, // Adjust autoplay speed as needed
+                arrows: true, // Show arrows
+                dots: true, // Show indicators
 
-            responsive: [
-                {
-                    breakpoint: 768,
-                    settings: {
-                        slidesToShow: 1 // Display one slide at a time on smaller screens
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1 // Display one slide at a time on smaller screens
+                        }
                     }
-                }
-            ]
+                ]
+            });
         });
-    });
-</script>
-<script>
-    document.getElementById('playButton').addEventListener('click', function () {
-        var video = document.getElementById('video');
-        var thumbnail = document.getElementById('videoThumbnail');
+    </script>
+    <script>
+        document.getElementById('playButton').addEventListener('click', function () {
+            var video = document.getElementById('video');
+            var thumbnail = document.getElementById('videoThumbnail');
 
-        thumbnail.style.display = 'none';
-        video.style.display = 'block';
-        video.play();
-    });
-</script>
+            thumbnail.style.display = 'none';
+            video.style.display = 'block';
+            video.play();
+        });
+    </script>
+</body>
+</html>
