@@ -922,7 +922,7 @@
         </div>
     </section>
 
-                    <footer class="footer-section">
+<footer class="footer-section">
     <div class="container">
         <div class="row m-0 align-items-center">
             <div class="col-md-8 col-12">
@@ -951,8 +951,8 @@
                         <div class="footer-divider">|</div>
                         <a href="https://home-5016262265.app-ionos.space/" target="_blank" class="footer-link">Impressum</a>
                         <div class="footer-divider hide--mobile">|</div>
-                        <!-- Updated link to the Datenschutzerklärung -->
-                        <a href="https://example.com/path/to/datenschutzerklaerung_pfotenschutz24_barmenia_de_de.pdf" target="_blank" class="footer-link">Datenschutz</a>
+                        <!-- Download-Link zur Datenschutzerklärung -->
+                        <a href="/mnt/data/datenschutzerklaerung_pfotenschutz24_barmenia_de_de.pdf" download class="footer-link">Datenschutz</a>
                         <div class="footer-divider">|</div>
                         <a whenclicked="UC_UI.showSecondLayer();" href="javascript:void(0);" class="footer-link">Cookie Einstellungen</a>
                     </div>
@@ -966,42 +966,3 @@
         </div>
     </div>
 </footer>
-
-<!-- Bootstrap JS (optional) -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-<!-- Slick JavaScript -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-
-<script>
-    $(document).ready(function () {
-        $('.slider').slick({
-            slidesToShow: 3, // Display three slides at a time
-            slidesToScroll: 1,
-            autoplay: false,
-            autoplaySpeed: 2000, // Adjust autoplay speed as needed
-            arrows: true, // Show arrows
-            dots: true, // Show indicators
-
-            responsive: [
-                {
-                    breakpoint: 768,
-                    settings: {
-                        slidesToShow: 1 // Display one slide at a time on smaller screens
-                    }
-                }
-            ]
-        });
-    });
-</script>
-<script>
-    document.getElementById('playButton').addEventListener('click', function () {
-        var video = document.getElementById('video');
-        var thumbnail = document.getElementById('videoThumbnail');
-
-        thumbnail.style.display = 'none';
-        video.style.display = 'block';
-        video.play();
-    });
-</script>
