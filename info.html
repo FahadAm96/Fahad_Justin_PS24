@@ -9735,22 +9735,22 @@ const insurancePlanALT = document.querySelector('h4 [data-variable="Tarif"]').te
 </div>
 </header>
 <div class="main" data-id="heyflow-main">
-<div class="step" id="step-1"><form data-id="heyflow-form" id="dogcare" method="POST" novalidate="">
+<form data-id="heyflow-form" id="dogcare" method="POST" novalidate="">
 <section class="visible" data-footer="footer" data-header="header" data-type="user" id="id-90ce34af" name="tarifrechner">
-<div class="block" data-blocktype="progress" style="">
-<div class="block-content progress-block progress-items-bar inner-narrow" id="id-d3274942">
-<div style="padding-top:20px; padding-bottom:20px;"><span class="progress-item filled"></span>
+<div class="step" id="step-1"><div class="block" data-blocktype="progress" style="">
+<div class="step" id="step-2"><div class="block-content progress-block progress-items-bar inner-narrow" id="id-d3274942">
+<div class="step" id="step-3"><div style="padding-top:20px; padding-bottom:20px;"><span class="progress-item filled"></span>
 <span class="progress-item"></span> <span class="progress-item"></span> <span class="progress-item"></span>
-</div>
-</div>
-</div>
-<div class="block hide_mobile hide_desktop" data-blocktype="rich-text" style="">
+</div><button onclick="previousStep()" type="button">Previous</button><button onclick="nextStep()" type="button">Next</button></div>
+</div><button onclick="previousStep()" type="button">Previous</button><button onclick="nextStep()" type="button">Next</button></div>
+</div><button onclick="previousStep()" type="button">Previous</button><button onclick="nextStep()" type="button">Next</button></div>
+<div class="step" id="step-4"><div class="block hide_mobile hide_desktop" data-blocktype="rich-text" style="">
 <div class="block-content text-block align-left inner-narrow" id="text-block-id-402706d2">
 <div class="rich-text" style="padding-top:20px; padding-right:5px; padding-bottom:20px;">
 <h2>Berechne, welcher Tarif am besten zu deinen Anforderungen passt.</h2>
 </div>
 </div>
-</div>
+</div><button onclick="previousStep()" type="button">Previous</button><button onclick="nextStep()" type="button">Next</button></div>
 <div class="block" data-blocktype="image" style="">
 <div class="block-content image-block inner-mid" id="image-block-img-dc719aa3" style="">
 <div style="text-align:center;"><img alt="Mein Bild" class="needs-eager" loading="eager" src="./assets/images/WhatsApp Image 2024-05-15 at 13.07.40_eba32ad6.jpg" style="height:80%;width:80%;"/></div>
@@ -30616,33 +30616,33 @@ const insurancePlanALT = document.querySelector('h4 [data-variable="Tarif"]').te
 </div>
 </div>
 </footer>
-</section></form><button onclick="previousStep()" type="button">Previous</button><button onclick="nextStep()" type="button">Next</button></div></div>
+</section></form></div>
 <script>
-  let currentStep = 0;
-  const steps = document.querySelectorAll('.step');
-  
-  function showStep(stepIndex) {
-    steps.forEach((step, index) => {
-      step.style.display = index === stepIndex ? 'block' : 'none';
-    });
-    currentStep = stepIndex;
-  }
+      let currentStep = 0;
+      const steps = document.querySelectorAll('.step');
+      
+      function showStep(stepIndex) {
+        steps.forEach((step, index) => {
+          step.style.display = index === stepIndex ? 'block' : 'none';
+        });
+        currentStep = stepIndex;
+      }
 
-  function nextStep() {
-    if (currentStep < steps.length - 1) {
-      showStep(currentStep + 1);
-    }
-  }
+      function nextStep() {
+        if (currentStep < steps.length - 1) {
+          showStep(currentStep + 1);
+        }
+      }
 
-  function previousStep() {
-    if (currentStep > 0) {
-      showStep(currentStep - 1);
-    }
-  }
+      function previousStep() {
+        if (currentStep > 0) {
+          showStep(currentStep - 1);
+        }
+      }
 
-  // Initialize first step
-  document.addEventListener('DOMContentLoaded', () => {
-    showStep(0);
-  });
-</script>
+      // Initialize first step
+      document.addEventListener('DOMContentLoaded', () => {
+        showStep(0);
+      });
+    </script>
 </body></html>
