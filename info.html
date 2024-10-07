@@ -428,7 +428,7 @@ const insurancePlanALT = document.querySelector('h4 [data-variable="Tarif"]').te
         windowConstants.STAGING_PROXY_BUCKET_URL = "https://flow1.heyflow.dev";
         windowConstants.STRIPE_PUBLIC_KEY = "pk_live_HlUYFuKvfheBVivGuZ0S9jjb00gpr225ol";
         windowConstants.SENTRY_ENV = "production";</script>
-<script async="async" aysnc="" defer="defer" src="https://cdn.trustindex.io/loader.js?8acddae241ab062c3f896b7aec"></script>
+<script aysnc="" defer="defer" src="https://cdn.trustindex.io/loader.js?8acddae241ab062c3f896b7aec"></script>
 <script>(function (w, d, s, l, i) {
             w[l] = w[l] || []; w[l].push({
                 'gtm.start':
@@ -9716,7 +9716,7 @@ const insurancePlanALT = document.querySelector('h4 [data-variable="Tarif"]').te
 <div class="inner-full container-style-plain" style="margin-right:10px; margin-left:10px;">
 <div class="elements-container-inner inner-full" style="justify-content:normal;align-items:center;flex-direction:row;margin-left:auto;margin-right:auto;">
 <div class="d-flex align-items-center" style="display: flex;align-items:center; ">
-<img alt="" class="logo" loading="lazy" src="./assets/images/ps24 logo.png"/>
+<img alt="" class="logo" src="./assets/images/ps24 logo.png"/>
 </div>
 <div class="block" data-blocktype="rich-text" style="">
 <div class="block-content text-block inner-mid align-right" id="text-block-rich-text-d03db90b">
@@ -9735,7 +9735,7 @@ const insurancePlanALT = document.querySelector('h4 [data-variable="Tarif"]').te
 </div>
 </header>
 <div class="main" data-id="heyflow-main">
-<form data-id="heyflow-form" id="dogcare" method="POST" novalidate="">
+<div class="step" id="step-1"><form data-id="heyflow-form" id="dogcare" method="POST" novalidate="">
 <section class="visible" data-footer="footer" data-header="header" data-type="user" id="id-90ce34af" name="tarifrechner">
 <div class="block" data-blocktype="progress" style="">
 <div class="block-content progress-block progress-items-bar inner-narrow" id="id-d3274942">
@@ -9753,7 +9753,7 @@ const insurancePlanALT = document.querySelector('h4 [data-variable="Tarif"]').te
 </div>
 <div class="block" data-blocktype="image" style="">
 <div class="block-content image-block inner-mid" id="image-block-img-dc719aa3" style="">
-<div style="text-align:center;"><img alt="Mein Bild" class="needs-eager" loading="lazy" src="./assets/images/WhatsApp Image 2024-05-15 at 13.07.40_eba32ad6.jpg" style="height:80%;width:80%;"/></div>
+<div style="text-align:center;"><img alt="Mein Bild" class="needs-eager" loading="eager" src="./assets/images/WhatsApp Image 2024-05-15 at 13.07.40_eba32ad6.jpg" style="height:80%;width:80%;"/></div>
 </div>
 </div>
 <div class="block" data-blocktype="rich-text" style="">
@@ -30594,9 +30594,9 @@ const insurancePlanALT = document.querySelector('h4 [data-variable="Tarif"]').te
 <div class="block-content logo-bar-block inner-narrow" id="logo-bar-block-id-d2ae7317">
 <div style="padding-top:20px; padding-bottom:40px;">
 <div class="logo-bar" style="justify-content:center; column-gap:30px; height:95px; grid-template-columns:repeat(2, 1fr);">
-<div class="logo-bar-image-wrapper"><img alt="Logo 1" class="" loading="lazy" src="https://storage.googleapis.com/builder.zenflow.de/dogcare/www/assets/b7d132d9-3353-4278-bf77-60ba5e3fecf7.jpeg"/></div>
-<div class="logo-bar-image-wrapper"><img alt="Logo 2" class="" loading="lazy" src="https://storage.googleapis.com/builder.zenflow.de/dogcare/www/assets/18cf937d-572b-4927-b716-c4e24f7b9715.jpeg"/></div>
-<div class="logo-bar-image-wrapper"><img alt="Logo 3" class="" loading="lazy" src="https://storage.googleapis.com/builder.zenflow.de/dogcare/www/assets/ed0d7f55-67c2-4a6f-bd7b-fda7134838bc.png"/></div>
+<div class="logo-bar-image-wrapper"><img alt="Logo 1" class="" src="https://storage.googleapis.com/builder.zenflow.de/dogcare/www/assets/b7d132d9-3353-4278-bf77-60ba5e3fecf7.jpeg"/></div>
+<div class="logo-bar-image-wrapper"><img alt="Logo 2" class="" src="https://storage.googleapis.com/builder.zenflow.de/dogcare/www/assets/18cf937d-572b-4927-b716-c4e24f7b9715.jpeg"/></div>
+<div class="logo-bar-image-wrapper"><img alt="Logo 3" class="" src="https://storage.googleapis.com/builder.zenflow.de/dogcare/www/assets/ed0d7f55-67c2-4a6f-bd7b-fda7134838bc.png"/></div>
 </div>
 </div>
 </div>
@@ -30616,4 +30616,33 @@ const insurancePlanALT = document.querySelector('h4 [data-variable="Tarif"]').te
 </div>
 </div>
 </footer>
-</section></form></div></body></html>
+</section></form><button onclick="previousStep()" type="button">Previous</button><button onclick="nextStep()" type="button">Next</button></div></div>
+<script>
+  let currentStep = 0;
+  const steps = document.querySelectorAll('.step');
+  
+  function showStep(stepIndex) {
+    steps.forEach((step, index) => {
+      step.style.display = index === stepIndex ? 'block' : 'none';
+    });
+    currentStep = stepIndex;
+  }
+
+  function nextStep() {
+    if (currentStep < steps.length - 1) {
+      showStep(currentStep + 1);
+    }
+  }
+
+  function previousStep() {
+    if (currentStep > 0) {
+      showStep(currentStep - 1);
+    }
+  }
+
+  // Initialize first step
+  document.addEventListener('DOMContentLoaded', () => {
+    showStep(0);
+  });
+</script>
+</body></html>
