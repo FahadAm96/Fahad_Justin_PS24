@@ -9743,14 +9743,14 @@ const insurancePlanALT = document.querySelector('h4 [data-variable="Tarif"]').te
 <span class="progress-item"></span> <span class="progress-item"></span> <span class="progress-item"></span>
 </div><button onclick="previousStep()" type="button">Previous</button><button onclick="nextStep()" type="button">Next</button></div>
 </div><button onclick="previousStep()" type="button">Previous</button><button onclick="nextStep()" type="button">Next</button></div>
-</div><button onclick="previousStep()" type="button">Previous</button><button onclick="nextStep()" type="button">Next</button></div>
+</div><button onclick="nextStep()" type="button">Next</button></div>
 <div class="step" id="step-4"><div class="block hide_mobile hide_desktop" data-blocktype="rich-text" style="">
 <div class="block-content text-block align-left inner-narrow" id="text-block-id-402706d2">
 <div class="rich-text" style="padding-top:20px; padding-right:5px; padding-bottom:20px;">
 <h2>Berechne, welcher Tarif am besten zu deinen Anforderungen passt.</h2>
 </div>
 </div>
-</div><button onclick="previousStep()" type="button">Previous</button><button onclick="nextStep()" type="button">Next</button></div>
+</div><button onclick="previousStep()" type="button">Previous</button></div>
 <div class="block" data-blocktype="image" style="">
 <div class="block-content image-block inner-mid" id="image-block-img-dc719aa3" style="">
 <div style="text-align:center;"><img alt="Mein Bild" class="needs-eager" loading="eager" src="./assets/images/WhatsApp Image 2024-05-15 at 13.07.40_eba32ad6.jpg" style="height:80%;width:80%;"/></div>
@@ -30640,7 +30640,7 @@ const insurancePlanALT = document.querySelector('h4 [data-variable="Tarif"]').te
         }
       }
 
-      // Initialize first step
+      // Initialize the first step and hide others
       document.addEventListener('DOMContentLoaded', () => {
         showStep(0);
       });
